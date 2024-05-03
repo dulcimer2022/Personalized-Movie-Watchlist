@@ -1,2 +1,0 @@
-# FinalProject
-for CS50
