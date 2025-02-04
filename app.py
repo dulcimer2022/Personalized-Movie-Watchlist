@@ -64,9 +64,8 @@ def forge():
 
 @app.route('/')
 def index():
-    user = User.query.first()   #read user record
     movies = Movie.query.all()  #read movie records
-    return render_template('index.html', user=user, movies=movies)
+    return render_template('index.html', movies=movies)
 
 @app.route('/user/<name>')
 def user_page(name):
@@ -80,6 +79,15 @@ def test_url_for():
     print(url_for('test_url_for'))
     print(url_for('test_url_for', num=2))
     return 'Test page'
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404 
+
+@app.context_processor
+def inject_user():  # 函数名可以随意修改
+    user = User.query.first()
+    return dict(user=user)  # 需要返回字典，等同于 return {'user': user}
 
 # Define database model
 class User(db.Model):  # table-name: user（generate lower case）
