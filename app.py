@@ -181,6 +181,10 @@ def login():
         #user = User.query.first()
         user = User.query.filter_by(username=username).first()
         # validation
+        if user is None:
+            flash('Invalid username or password.')
+            return redirect(url_for('login'))
+        
         if username == user.username and user.check_password(password):
             login_user(user)  
             flash('Login success.')
