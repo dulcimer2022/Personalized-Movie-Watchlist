@@ -114,3 +114,7 @@ def logout():
     logout_user()  
     flash('Goodbye.')
     return redirect(url_for('index'))  
+
+@app.route('/test')
+def test_route():
+    return "If you can see this, the server is working!"

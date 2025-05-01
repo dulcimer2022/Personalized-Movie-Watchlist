@@ -35,16 +35,15 @@ $ cd watchlist
 ```
 2. Set up a virtual environment and install dependencies:
 ```
-python -m venv env
+python3 -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 pip install -r requirements.txt
 ```
 3. generate fake data:
 ```
 (env) $ flask forge
-* Running on http://127.0.0.1:5000/
 ```
-4. update admin user
+5. update admin user
 ```
 (env) $ flask admin
 ```
@@ -52,5 +51,6 @@ pip install -r requirements.txt
 ```
 (env) $ flask run
 ```
+* Running on http://127.0.0.1:8080/
 
 
