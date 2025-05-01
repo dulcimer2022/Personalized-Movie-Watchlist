@@ -1,6 +1,8 @@
 ## Personalized Movie Watchlist
 A web application built with Flask that helps movie enthusiasts keep track of their favorite films and movies they want to watch. This project demonstrates the implementation of a full-featured web application with user authentication, database management, and CRUD operations.
-
+### Link: [dulcimer2022.pythonanywhere.com/](https://dulcimer2022.pythonanywhere.com/)
+user: admin <br>
+password: 123
 ### Features
 - User authentication system (register, login, logout)
 - Create, read, update, and delete movie entries
